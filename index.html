@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <style>
     body{
-      background-image: url("/Images/Whatsapp_backgrd.jpg");
+      background-color:#e0dcd3;
       background-size:cover;
       margin: 0;
       background-repeat: no-repeat;
@@ -35,10 +35,11 @@
    .status-name{
      display: flex;
       flex-direction: column;
+      flex: 1;
    }
    .name{ margin: 0; font-weight: 500; font-size: 16px; }
    
-    .status { margin: 0; font-size 12px; font-weight:200;}
+    .status { margin: 0; font-size: 14px; font-weight:lighter; opacity: 0.7;}
     
     .right { display: flex; align-items: center; gap: 4px;}
     
@@ -69,6 +70,73 @@
       max-width: 400px;
       text-align: Center;
       margin: 0;
+    }
+    .message_chat{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 12px 20px;
+      gap: 8px;
+      overflow-y: auto;
+    }
+    .message_1{
+      background-color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 12px;
+      max-width: 60%;
+      align-self: flex-start;
+    }
+    .message_2{
+      background-color: #DCF8C6;
+      padding: 8px 12px;
+      border-radius: 12px;
+      max-width: 60%;
+      align-self: flex-end;
+    }
+    .message_3{
+      background-color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 12px;
+      max-width: 60%;
+      align-self: flex-start;
+    }
+    .message_4{
+      background-color: #DCF8C6;
+      padding: 8px 12px;
+      border-radius: 12px;
+      max-width: 60%;
+      align-self: flex-end;
+    }
+    
+    .bottom{
+      background-color: #F0F0F0;
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      flex-shrink: 0;
+      justify-content: space-between;
+    }
+    .message_input{
+      flex-grow: 1;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      margin: 0 8px;
+    } 
+
+    .emoji{
+      font-size: 24px;
+      color: #555;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .send{
+      font-size: 24px;
+      color: #01d13c;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -121,12 +189,22 @@
       </div>
       
       <div class="message_chat">
-        
+        <p class="message_1">Hey! How are you? 👋</p>
+        <p class="message_2">I'm good, thanks! You?</p>
+        <p class="message_3">Pretty great. Working on this chat UI 😄</p>
+        <p class="message_4">It's looking clean 🔥</p>
       </div>
     
       
       <div class="bottom">
-        
+        <button class="emoji">
+          <i class="bi bi-emoji-smile"></i>
+        </button>
+        <input type="text" placeholder="Message" class="message_input">
+        <button class="send">
+          <i class="bi bi-send-fill"></i>
+        </button>
+
       </div>
 </body>
 </html>
